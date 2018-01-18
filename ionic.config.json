@@ -1,0 +1,8 @@
+{
+  "name": "funvido",
+  "app_id": "69abeb33",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
