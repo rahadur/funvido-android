@@ -1,0 +1,26 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ category?.title }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <div class="video" *ngFor="let video of category?.videos">
+            
+          <img class="video-img" src="https://i1.ytimg.com/vi/{{video.videoId}}/{{ video.thumbnailType }}" (click)="playVideo(video.videoId)"/>
+          
+          <action-sheet [video]="video"></action-sheet>
+          
+        </div>
+      </ion-list>
+  
+     
+      <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+
+</ion-content>

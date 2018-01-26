@@ -1,3 +1,30 @@
 page-home {
+    
+    .video {
 
+        margin-bottom: 5px;
+
+        .content {
+            .title {
+                max-height: 33px;
+                overflow: hidden;
+            }
+            .note {
+                font-size: 1.3rem;
+            }
+        }
+
+        .item-md {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        [text-wrap] .label-md {
+            max-height: 36px;
+        }
+
+        .label-md {
+            margin: 0px 0px 13px 0;
+        }
+    }
 }

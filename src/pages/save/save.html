@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-title>Save Videos</ion-title>
+
+      <ion-buttons end>
+        <button ion-button icon-only (click)="openSearch()">
+          <ion-icon name="search"></ion-icon>
+        </button>
+      </ion-buttons>
+      
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+  <ion-list>
+      <ion-item-sliding #item *ngFor="let video of videos">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="https://i1.ytimg.com/vi/{{video.videoId}}/{{video.thumbnailType}}">
+          </ion-thumbnail>
+          <h2>{{ video.title }}</h2>
+          <p>{{ video.created | date: 'mediumDate' }}</p>
+        </ion-item>
+  
+        <ion-item-options side="right">
+            <button ion-button clear (click)="playVideo(video.videoId)"> 
+              <ion-icon name="play"></ion-icon> 
+              Play
+            </button>
+            <button ion-button color="danger" (click)="removeVideo(video)">
+              <ion-icon name="trash"></ion-icon>
+              Delete
+            </button>
+        </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

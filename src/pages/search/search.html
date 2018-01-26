@@ -1,0 +1,22 @@
+<ion-header no-border>
+  <ion-toolbar>
+      <ion-searchbar #search [(ngModel)]="searchText"
+      (ionInput)="onInput($event)"
+      (ionClear)="refreshSearch()"
+      (search)="searchVideos()"
+       placeholder="Search FunVido" >
+    </ion-searchbar>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-list no-lines>
+        <button ion-item *ngFor="let video of videos" (click)="titleSelected(video.title)">
+          {{ video.title }}
+        </button> 
+      </ion-list>
+
+</ion-content>

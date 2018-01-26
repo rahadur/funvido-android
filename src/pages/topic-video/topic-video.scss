@@ -1,0 +1,29 @@
+page-topic-video {
+    .video {
+
+        padding-bottom: 5px;
+        
+
+        .content {
+            .title {
+                font-size: 1.5rem;
+                height: 45px;
+                max-height: 45px;
+                overflow: hidden;
+            }
+        }
+
+        .item-md {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+
+        [text-wrap] .label-md {
+            max-height: 36px;
+        }
+
+        .label-md {
+            margin: 0px 0px 13px 0;
+        }
+    }
+}

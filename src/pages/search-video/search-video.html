@@ -1,0 +1,24 @@
+<ion-header no-border>
+    <ion-toolbar>
+        <ion-searchbar [(ngModel)]="searchText"
+        (search)="searchVideos()"
+        (ionClear)="backToSearch()" >
+      </ion-searchbar>
+      
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+    <ion-list [virtualScroll]="videos" no-lines>
+
+        <div class="video" *virtualItem="let video">
+        
+            <img class="video-img" src="https://i1.ytimg.com/vi/{{video.videoId}}/{{ video.thumbnailType }}" (click)="playVideo(video.videoId)"/>
+            
+            <action-sheet [video]="video"></action-sheet>
+        </div>
+            
+    </ion-list>
+</ion-content>
